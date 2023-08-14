@@ -1,0 +1,17 @@
+.autorization_container{
+    height: 800px;
+    background-color: #001f45;
+    display: flex;
+    justify-content: center;
+}
+
+.autorization_content{
+    padding-top: 100px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    margin: 2em;
+    padding: 0;
+}

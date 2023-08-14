@@ -1,0 +1,210 @@
+.btn_back {
+    max-width: 100px;
+    min-height: 50px;
+}
+a{
+    text-decoration: none;
+}
+.text {
+font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+.main_container_store {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main_wraper {
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+.content_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.item {
+    margin: 0 30px;
+    max-width: 15em;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.product_wraper {
+    display: flex;
+    justify-content: center; 
+    position: relative; 
+    margin-bottom: 10px;
+}
+
+.product_wraper:hover .viwe_btn {
+    display: block;
+}
+
+.discount_percentage{
+    background-color: #e7dddd;
+    border-radius: 10px;
+    position: absolute;
+    left: 10px;
+    bottom: 5px; 
+}
+.discount_percentage_text{
+    color: rgb(255, 58, 225);
+}
+
+.img_product{
+    max-width: 100%
+}
+
+.viwe_btn{
+position: absolute;
+border: 0;
+ border-radius: 40px;
+ max-width: 120px;
+ min-height: 30px;
+ top: 80px;
+ display: none;
+ opacity: 0.8;
+}
+
+.price_wraper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 50%;
+    min-height: 50px;
+}
+.price_item{
+    margin-right: 3px;
+    font-weight: 700;
+}
+
+.price{
+font-size: 15px;
+}
+.discount{
+color: gray;
+text-decoration: line-through;
+}
+.discount_card{
+color: rgb(255, 58, 225);
+}
+
+.discription_wraper{
+    margin-bottom: 15px;
+}
+.discription{
+    color: gray;
+}
+.rating_wraper{
+display: flex;
+justify-content: space-between;
+max-width: max-content;
+margin-bottom: 10px;
+}
+
+.rating-area {
+	overflow: hidden;
+	max-width: 100px;
+
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 20px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 12px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+	position: relative;
+}
+
+.raiting_text{
+    color: gray;
+}
+
+.installment_wraper{
+    max-width: 100px;
+    min-height: 25px;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(242, 255, 0),rgb(176, 202, 6), rgb(41, 255, 109));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.nstallment_text{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+.basket_wraper {
+    max-width: 150px;
+    position: relative;
+}
+.basket{
+    min-width: 80px;
+    min-height: 30px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(255, 58, 225);
+    color: white;
+}
+
+.favorites{
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url("./shopImg/like1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    margin-right: 40px;
+}
+
+.favorites:hover{
+    cursor: pointer;
+    background-image: url("./shopImg/like3.png");
+}
+.favorites:active{
+    background-image: url("./shopImg/like2.png");
+}
+
+
+
+
+
