@@ -4,6 +4,7 @@ import AuthContext from '../context/loggerContext';
 const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(null);
   const logIn = (values) => {
+    console.log(values)
         localStorage.setItem('userEmail', JSON.stringify(values.email));
         setLoggedIn(true);                 
   };

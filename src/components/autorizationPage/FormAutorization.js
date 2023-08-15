@@ -17,11 +17,10 @@ const Login = () => {
     email: Yup.string().email('Некоректный адрес эдектронной почты').required('Обязательное поле'),
     password: Yup.string()
       .min(8, 'Пароль должен содержать не менее 8 символов')
-      .trim('В пароле не должно быть пробелов')
       .matches(/[A-Z]/, 'В пароле должна присутствовать одна заглавная буква')
       .required('Обязательное поле')
   });
-  console.log()
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -29,13 +28,13 @@ const Login = () => {
     },
     validationSchema: SignupSchema,
     onSubmit: () => {
+      values.password = values.password.trim();
       const refreshId = setInterval(() => {                                // имитацию проверки равная 2-ум секундам
         try {
           autContext.logIn(formik.values);
           navigate(mainPageRoute);
           clearInterval(refreshId)
         } catch (_) {
-          formik.setErrors({ password: 'errors.enterNickPassword' });
           clearInterval(refreshId)
         }
       }, 2000)
@@ -46,6 +45,7 @@ const Login = () => {
     errors, touched, values, handleChange, handleSubmit, isSubmitting,
   } = formik;
   
+
   const MyFormHelperText = ({ formikTouch, formikError }) => {
     return formikTouch && formikError ? <StyledFormHelperText
       style={{ color: "red" }}
