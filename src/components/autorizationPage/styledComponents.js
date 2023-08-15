@@ -6,6 +6,7 @@ const StyledTextField = styled(TextField)`
   background-color: white;
   position: relative;
   width: 3em
+  background-color: #0e3f7c;
 `;
 
 const StyledLoadingButton = styled(LoadingButton)`
