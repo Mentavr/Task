@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect, Component } from 'react';
 import { useDispatch } from 'react-redux';
 import SocketContext from "../context/socketContext";
 import { addEvents } from '../slice/eventStoreSlice';
