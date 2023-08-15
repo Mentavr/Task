@@ -4,8 +4,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 
 const StyledTextField = styled(TextField)`
   background-color: white;
-  background-radius: 10px;
   position: relative;
+  width: 3em
 `;
 
 const StyledLoadingButton = styled(LoadingButton)`

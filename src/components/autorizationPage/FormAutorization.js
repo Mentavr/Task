@@ -61,7 +61,7 @@ const Login = () => {
         <StyledBox
           component="form"
           sx={{
-            '& .MuiTextField-root': { m: 4, width: '50ch' },
+            '& .MuiTextField-root': { m: 4, width: '40ch' },
           }}
           autoComplete="off"
           onSubmit={handleSubmit}
