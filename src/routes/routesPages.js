@@ -1,5 +1,5 @@
 const routesPages = {
-    atorithationRoute: '/login',
+    autorithationRoute: '/login',
     mainPageRoute: '/',
     marketPageRoute:  '/market',
     allPathRoute: '*',

@@ -1,23 +1,19 @@
 import React from "react";
-import iphone from './shopImg/iphone.jpeg'
+import iphone from "./shopImg/iphone.jpeg"
 import "./Shop.css"
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from "react-redux";
-import routesPages from "../../routes/routesPages";
-import { setConnectEvents } from "../../slice/eventStoreSlice";
+import routesPages from "../routes/routesPages";
 
 const ShopPage = () => {
-    const dispatch = useDispatch()
     const navigate = useNavigate()
     const { mainPageRoute } = routesPages;
     
     const handlerBack = () => {
         navigate(mainPageRoute);
-        dispatch(setConnectEvents('open'));
     }
 
     return (
-        <>
+        <div className="store_container">
         <header>
         <button className="btn_back" onClick={handlerBack}>Назад</button>
         </header>
@@ -261,7 +257,7 @@ const ShopPage = () => {
                 </div>
             </section>
         </main>
-        </>
+        </div>
     )
 }
 

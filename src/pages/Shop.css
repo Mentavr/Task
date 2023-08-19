@@ -2,15 +2,22 @@
     max-width: 100px;
     min-height: 50px;
 }
+
 a{
     text-decoration: none;
 }
+
 .text {
 font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     padding: 0;
     margin: 0;
 }
+
+.store_container{
+    background-color: white;
+}
+
 .main_container_store {
     width: 100%;
     display: flex;
@@ -61,14 +68,14 @@ font-family: 'Times New Roman', Times, serif;
 }
 
 .viwe_btn{
-position: absolute;
-border: 0;
- border-radius: 40px;
- max-width: 120px;
- min-height: 30px;
- top: 80px;
- display: none;
- opacity: 0.8;
+    position: absolute;
+    border: 0;
+    border-radius: 40px;
+    max-width: 120px;
+    min-height: 30px;
+    top: 80px;
+    display: none;
+    opacity: 0.8;
 }
 
 .price_wraper{
@@ -84,14 +91,14 @@ border: 0;
 }
 
 .price{
-font-size: 15px;
+    font-size: 15px;
 }
 .discount{
-color: gray;
-text-decoration: line-through;
+    color: gray;
+    text-decoration: line-through;
 }
 .discount_card{
-color: rgb(255, 58, 225);
+    color: rgb(255, 58, 225);
 }
 
 .discription_wraper{
@@ -101,10 +108,10 @@ color: rgb(255, 58, 225);
     color: gray;
 }
 .rating_wraper{
-display: flex;
-justify-content: space-between;
-max-width: max-content;
-margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: max-content;
+    margin-bottom: 10px;
 }
 
 .rating-area {

@@ -1,18 +1,13 @@
 import React from 'react';
-import {
-  Navigate,
-  Outlet,
-} from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 import useAuth from '../hooks/useAuth.js';
-import routes from '../routes/routesPages.js'
+import routes from '../routes/routesPages.js';
 
 const PrivateRoute = () => {
-  const { atorithationRoute } = routes;
+  const { autorithationRoute } = routes;
   const autContext = useAuth();
-  console.log(autContext.loggedIn)
-  return autContext.loggedIn ? <Outlet /> : <Navigate to={ atorithationRoute } />;
+  return autContext.loggedIn ? <Outlet /> : <Navigate to={autorithationRoute} />;
 };
 
 export default PrivateRoute;
 
-// autContext.loggedIn
