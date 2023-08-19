@@ -2,14 +2,18 @@ import React from "react";
 import iphone from './shopImg/iphone.jpeg'
 import "./Shop.css"
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from "react-redux";
 import routesPages from "../../routes/routesPages";
+import { setConnectEvents } from "../../slice/eventStoreSlice";
 
 const ShopPage = () => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const { mainPageRoute } = routesPages;
     
     const handlerBack = () => {
         navigate(mainPageRoute);
+        dispatch(setConnectEvents('open'));
     }
 
     return (
@@ -250,7 +254,7 @@ const ShopPage = () => {
                             <p className="text installment_text">Рассрочка 0-0-6</p>
                         </div>
                         <div className="basket_wraper">
-                            <button className="text basket">В корзину</button>
+                            <button className="text basket" type="button">В корзину</button>
                             <div className="favorites"></div>
                         </div>
                     </div>

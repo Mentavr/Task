@@ -167,7 +167,7 @@ margin-bottom: 10px;
     font-weight: 500;
 }
 
-.basket_wraper {
+.basket_wrapr {
     max-width: 150px;
     position: relative;
 }
@@ -178,6 +178,15 @@ margin-bottom: 10px;
     border: 0;
     background-color: rgb(255, 58, 225);
     color: white;
+}
+
+.basket:hover {
+    cursor: pointer;
+    background-color: rgb(202, 81, 184);
+}
+.basket:active {
+    cursor: pointer;
+    background-color: rgb(160, 64, 145);
 }
 
 .favorites{

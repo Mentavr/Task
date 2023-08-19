@@ -16,8 +16,8 @@ const App = () => {
 
   return (
     <ProviderReduce store={store}>
+     <AuthProvider>
       <ApiProvider>
-        <AuthProvider>
           <Router>
             <Routes>
               <Route path={mainPageRoute} element={<PrivateRoute />}>
@@ -27,8 +27,8 @@ const App = () => {
               <Route path={atorithationRoute} element={<Login />} />
             </Routes>
           </Router>
-        </AuthProvider>
       </ApiProvider>
+      </AuthProvider>
     </ProviderReduce>
   );
 };

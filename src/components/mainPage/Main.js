@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { userData } from "../../slice/apiDataSlice";
 import TableUsers from "./TableUsers";
 import TableEvent from "./TableEvent";
+import { setConnectEvents } from "../../slice/eventStoreSlice";
 import "./Main.css"
 
 
@@ -21,7 +22,9 @@ const MainPage = () => {
         autContext.logOut();
         navigate(atorithationRoute);
     }
+    
     const handlerShop = () => {
+        dispatch(setConnectEvents("close"))
         navigate(marketPageRoute);
     }
 

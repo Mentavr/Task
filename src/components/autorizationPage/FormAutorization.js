@@ -14,13 +14,20 @@ const Login = () => {
   const { mainPageRoute } = routesPages;
 
   const SignupSchema = Yup.object({
-    email: Yup.string().email('Некоректный адрес эдектронной почты').required('Обязательное поле'),
+    email: Yup.string()
+    .email('Неверный формат email')
+    .matches(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      'Неверный формат email'
+    )
+    .required('Обязательное поле'),
     password: Yup.string()
       .min(8, 'Пароль должен содержать не менее 8 символов')
       .matches(/[A-Z]/, 'В пароле должна присутствовать одна заглавная буква')
+      .trim()
       .required('Обязательное поле')
   });
-
+  
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -28,7 +35,7 @@ const Login = () => {
     },
     validationSchema: SignupSchema,
     onSubmit: () => {
-      values.password = values.password.trim();
+      console.log(formik.values)
       const refreshId = setInterval(() => {                                // имитацию проверки равная 2-ум секундам
         try {
           autContext.logIn(formik.values);
@@ -56,7 +63,6 @@ const Login = () => {
 
   return (
     <div className='autorization_container'>
-      <div className='autorization_content'>
         <h1 className='title'>Авторизация</h1>
         <StyledBox
           component="form"
@@ -107,7 +113,6 @@ const Login = () => {
           >Авторизация
           </StyledLoadingButton>
         </StyledBox>
-      </div>
     </div>
   );
 };

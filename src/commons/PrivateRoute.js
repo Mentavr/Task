@@ -9,7 +9,10 @@ import routes from '../routes/routesPages.js'
 const PrivateRoute = () => {
   const { atorithationRoute } = routes;
   const autContext = useAuth();
+  console.log(autContext.loggedIn)
   return autContext.loggedIn ? <Outlet /> : <Navigate to={ atorithationRoute } />;
 };
 
 export default PrivateRoute;
+
+// autContext.loggedIn

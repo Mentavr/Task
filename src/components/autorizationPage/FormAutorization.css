@@ -1,17 +1,14 @@
 .autorization_container{
-    height: 800px;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #0e3f7c;
-}
-
-.autorization_content{
-    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
     color: white;
     text-align: center;
-    margin: 2em;
+    margin: 1em;
     padding: 0;
 }
