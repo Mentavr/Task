@@ -32,15 +32,17 @@ const MainPage = () => {
     navigate(mainPageRoute);
   };
 
+  useEffect(() => {
+    dispatch(userData());
+  }, [dispatch]);
 
   useEffect(() => {
     return () => setSocketUrl(null);
   }, []);
 
   useEffect(() => {
-    dispatch(userData());
     dispatch(addEvents(lastJsonMessage));
-  }, [dispatch, lastJsonMessage]);
+  },[lastJsonMessage]);
 
   return (
     <div className='main_container'>
