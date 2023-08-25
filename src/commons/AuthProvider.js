@@ -5,6 +5,7 @@ const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(null);
   const logIn = (values) => {
         localStorage.setItem('userEmail', JSON.stringify(values.email));
+        localStorage.setItem('userPassword', JSON.stringify(values.password.trim()));
         setLoggedIn(true);                
   };
   const logOut = () => {

@@ -19,7 +19,7 @@ const App = () => {
           <Routes>
           <Route path={autorithationRoute} element={<Login />} />
             <Route path={mainPageRoute} element={<PrivateRoute />}>
-              <Route index element={<MainPage />} />
+                  <Route index element={<MainPage />} />
               <Route path={marketPageRoute} element={<ShopPage />} />
             </Route>
           </Routes>

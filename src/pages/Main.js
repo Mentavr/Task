@@ -16,7 +16,11 @@ const MainPage = () => {
   const dispatch = useDispatch();
   const autContext = useAuth();
   const navigate = useNavigate();
-  const { lastJsonMessage } = useWebSocket(socketUrl);
+  const { lastJsonMessage, readyState } = useWebSocket(socketUrl, {
+    onOpen: () => console.info('open'),
+    onClose: () => console.info('close'),
+  });
+  
   const { autorithationRoute, marketPageRoute, mainPageRoute } = routesPages;
 
   const handlerExit = () => {
