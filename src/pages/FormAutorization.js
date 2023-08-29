@@ -29,7 +29,6 @@ const Login = () => {
     password: Yup.string()
       .min(8, 'Пароль должен содержать не менее 8 символов')
       .matches(/[A-Z]/, 'В пароле должна присутствовать одна заглавная буква')
-      .trim()
       .required('Обязательное поле'),
   });
 
@@ -55,6 +54,17 @@ const Login = () => {
 
   const { errors, touched, values, handleChange, handleSubmit, isSubmitting } =
     formik;
+
+    const handlePasswordChange = (event) => {
+      const { value } = event.target;
+      if(event.target.value === ' ') {
+        console.log('пробел')
+      }
+      const newValue = value.trim();
+      event.target.value = newValue;
+      handleChange(event);
+    };
+
 
   const MyFormHelperText = ({ formikTouch, formikError }) => {
     return formikTouch && formikError ? (
@@ -113,7 +123,7 @@ const Login = () => {
             type='password'
             autoComplete='current-password'
             name='password'
-            onChange={handleChange}
+            onChange={(event) => handlePasswordChange(event)}
             value={values.password}
             error={touched.password && errors.password}
           />

@@ -5,11 +5,12 @@ const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(null);
   const logIn = (values) => {
         localStorage.setItem('userEmail', JSON.stringify(values.email));
-        localStorage.setItem('userPassword', JSON.stringify(values.password.trim()));
+        localStorage.setItem('userPassword', JSON.stringify(values.password));
         setLoggedIn(true);                
   };
   const logOut = () => {
     localStorage.removeItem('userEmail');
+    localStorage.removeItem('userPassword');
     setLoggedIn(null);
   };
   const value = useMemo(() => ({ loggedIn, logIn, logOut }), [loggedIn]);
