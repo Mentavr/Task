@@ -57,9 +57,6 @@ const Login = () => {
 
     const handlePasswordChange = (event) => {
       const { value } = event.target;
-      if(event.target.value === ' ') {
-        console.log('пробел')
-      }
       const newValue = value.trim();
       event.target.value = newValue;
       handleChange(event);
