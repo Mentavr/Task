@@ -113,7 +113,7 @@ const Login = () => {
             htmlFor='outlined-password-input'
             style={{ color: 'white' }}
           >
-            Парольnnn
+            Парольnn
           </StyledInputLabel>
           <StyledTextField
             id='outlined-password-input'
